@@ -27,11 +27,11 @@ class SpaceXDetailsActivity : AppCompatActivity() {
 
     private fun showSpaceXLaunchDetails(spaceXLaunch: SpaceX) {
         // Mostrar los detalles del lanzamiento
-        binding.tvLaunchName.text = spaceXLaunch.name ?: "Name not available"
-        binding.tvLaunchDate.text = spaceXLaunch.dateUtc ?: "Date not available"
-        binding.tvLaunchWebcast.text = spaceXLaunch.links.webcast ?: "Webcast not available"
-        binding.tvLaunchYouTube.text = spaceXLaunch.links.youtubeId ?: "YouTube not available"
-        binding.tvLaunchWikipedia.text = spaceXLaunch.links.wikipedia ?: "Wikipedia link not available"
+        binding.tvLaunchName.text = spaceXLaunch.name ?: "Nombre no disponible"
+        binding.tvLaunchDate.text = spaceXLaunch.dateUtc ?: "Fecha  no disponible"
+        binding.tvLaunchWebcast.text = spaceXLaunch.links.webcast ?: "Webcast  no disponible"
+        binding.tvLaunchFails.text = (spaceXLaunch.failures ?: "Fallos no disponibles").toString()
+        binding.tvLaunchWikipedia.text = spaceXLaunch.links.wikipedia ?: "Wikipedia link  no disponible"
 
         val imageUrl = spaceXLaunch.links?.patch?.small
         Picasso.get().load(imageUrl).into(binding.ivSpaceXLaunch)
@@ -43,12 +43,10 @@ class SpaceXDetailsActivity : AppCompatActivity() {
     private fun makeLinksClickable() {
         // Establezco el movimiento del enlace para los TextView
         binding.tvLaunchWebcast.movementMethod = LinkMovementMethod.getInstance()
-        binding.tvLaunchYouTube.movementMethod = LinkMovementMethod.getInstance()
         binding.tvLaunchWikipedia.movementMethod = LinkMovementMethod.getInstance()
 
         // Convierto los enlaces a hipervínculos clicables
         Linkify.addLinks(binding.tvLaunchWebcast, Linkify.WEB_URLS)
-        Linkify.addLinks(binding.tvLaunchYouTube, Linkify.WEB_URLS)
         Linkify.addLinks(binding.tvLaunchWikipedia, Linkify.WEB_URLS)
     }
 }

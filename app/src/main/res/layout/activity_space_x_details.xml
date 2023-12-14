@@ -73,10 +73,10 @@
         app:layout_constraintVertical_bias="0.588" />
 
     <TextView
-        android:id="@+id/tvLaunchYouTube"
+        android:id="@+id/tvLaunchFails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="YouTube"
+        android:text="Fallos"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,12 +87,12 @@
 
     <Button
         android:id="@+id/btnBackToMain"
-        android:layout_width="101dp"
-        android:layout_height="36dp"
+        android:layout_width="139dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="16dp"
         android:background="#626A69"
-        android:textColor="@color/white"
         android:text="Volver"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.519"
@@ -112,10 +112,10 @@
         app:layout_constraintVertical_bias="0.709" />
 
     <TextView
-        android:id="@+id/tvLaunchYouTubeLabel"
+        android:id="@+id/tvLaunchFailsLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="YouTube ID:"
+        android:text="Fallos:"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
